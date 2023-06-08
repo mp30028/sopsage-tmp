@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  sopsage:
+    container_name: sopsage
+    build: "."
+      
+    image: sopsage
+    stdin_open: true
+    tty: true
+    env_file: .env 
+    volumes:
+    - ${KEYS_DIRECTORY}:/sopsage-keys
+    - ${DATA_DIRECTORY}:/sopsage-data
+#    networks:
+#      - db-network
+
+#networks:
+# db-network:
+#  name: mysql-setup_test-db-net
+#  external: true
