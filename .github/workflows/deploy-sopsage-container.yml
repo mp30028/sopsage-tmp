@@ -1,4 +1,4 @@
-name: deploy-and-start-mysql
+name: deploy-sopsage-container
 
 on:
 # Trigger workflow manually
