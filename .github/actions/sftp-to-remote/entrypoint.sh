@@ -19,7 +19,7 @@ chmod 600 $SSH_PRIVATE_KEY_FILE
 
 echo 'Starting SFTP...'
 printf "%s" "put -r $local_filepath $remote_filepath" > $SFTP_BATCH_FILE
-echo "remote_port='$remote_port' remote_username='$remote_username' remote_host='$remote_host' remote_filepath='$remote_filepath'"
+
 ssh -o StrictHostKeyChecking=no -p $remote_port -i $SSH_PRIVATE_KEY_FILE $remote_username@$remote_host mkdir -p $remote_filepath
 
 sftp -b $SFTP_BATCH_FILE -P $remote_port -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY_FILE $remote_username@$remote_host
