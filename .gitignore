@@ -9,6 +9,8 @@
 ##############################
 .env.*
 .env
+!_configs/defaults/.env
+!_configs/defaults/.env.*
 
 ##############################
 ## drawio
