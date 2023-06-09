@@ -2,6 +2,7 @@
 ## keys
 ##############################
 *.private
+!_configs/defaults/*.private
 
 ##############################
 ## environment variables
